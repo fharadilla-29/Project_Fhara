@@ -1,0 +1,12 @@
+[
+  { "id": "PAT-001", "name": "Ahmad Wijaya", "email": "ahmad@email.com", "phone": "081234567890", "status": "Aktif" },
+  { "id": "PAT-002", "name": "Siti Nurhaliza", "email": "siti@email.com", "phone": "081234567891", "status": "Aktif" },
+  { "id": "PAT-003", "name": "Budi Santoso", "email": "budi@email.com", "phone": "081234567892", "status": "Aktif" },
+  { "id": "PAT-004", "name": "Rina Marlina", "email": "rina@email.com", "phone": "081234567893", "status": "Aktif" },
+  { "id": "PAT-005", "name": "Doni Hermawan", "email": "doni@email.com", "phone": "081234567894", "status": "Tidak Aktif" },
+  { "id": "PAT-006", "name": "Lestari Dewi", "email": "lestari@email.com", "phone": "081234567895", "status": "Aktif" },
+  { "id": "PAT-007", "name": "Bambang Iwan", "email": "bambang@email.com", "phone": "081234567896", "status": "Aktif" },
+  { "id": "PAT-008", "name": "Suryanti Kusuma", "email": "suryanti@email.com", "phone": "081234567897", "status": "Aktif" },
+  { "id": "PAT-009", "name": "Hendri Permana", "email": "hendri@email.com", "phone": "081234567898", "status": "Tidak Aktif" },
+  { "id": "PAT-010", "name": "Putri Ananda", "email": "putri@email.com", "phone": "081234567899", "status": "Aktif" }
+]

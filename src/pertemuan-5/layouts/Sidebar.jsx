@@ -7,7 +7,7 @@ export default function Sidebar() {
             {/* Logo */}
             <div id="sidebar-logo" className="flex flex-col">
                 <span id="logo-title" className="font-poppins font-extrabold text-[48px] text-gray-900">
-		                Sedap <b id="logo-dot" className="text-hijau">.</b>
+		                Apotek Sehat <b id="logo-dot" className="text-hijau">.</b>
 		            </span>
                 <span id="logo-subtitle" className="font-semibold text-gray-400">Modern Admin Dashboard</span>
             </div>
@@ -44,7 +44,7 @@ export default function Sidebar() {
                         <img id="footer-avatar" className="w-16 h-16 rounded-full" src="/img/fhara.jpeg" />
                     </div>
                 </div>
-                <span id="footer-brand" className="font-bold text-gray-400">Sedap Restaurant Admin Dashboard</span>
+                <span id="footer-brand" className="font-bold text-gray-400">Apotek Sehat Admin Dashboard</span>
                 <p id="footer-copyright" className="font-light text-gray-400">&copy; 2025 All Right Reserved</p>
             </div>
         </div>

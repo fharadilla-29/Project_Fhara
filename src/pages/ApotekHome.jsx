@@ -105,10 +105,10 @@ export default function ApotekHome() {
                 A+
               </div>
               <div>
-                <h1 className="font-bold text-lg text-gray-800">Apotek Sehat</h1>
-                <p className="text-xs text-gray-600">
-                  Terpercaya & Terlengkap
-                </p>
+                <h1 className="font-bold text-lg text-gray-800">
+                  Apotek Sehat
+                </h1>
+                <p className="text-xs text-gray-600">Terpercaya & Terlengkap</p>
               </div>
             </div>
 
@@ -159,19 +159,34 @@ export default function ApotekHome() {
             >
               Beranda
             </a>
-            <Link to="/products" className="text-gray-600 hover:text-emerald-600 font-medium">
+            <Link
+              to="/products"
+              className="text-gray-600 hover:text-emerald-600 font-medium"
+            >
               Produk
             </Link>
-            <Link to="/resep-dokter" className="text-gray-600 hover:text-emerald-600 font-medium">
+            <Link
+              to="/resep-dokter"
+              className="text-gray-600 hover:text-emerald-600 font-medium"
+            >
               Resep Dokter
             </Link>
-            <a href="#" className="text-gray-600 hover:text-emerald-600 font-medium">
+            <a
+              href="#"
+              className="text-gray-600 hover:text-emerald-600 font-medium"
+            >
               Artikel
             </a>
-            <a href="#" className="text-gray-600 hover:text-emerald-600 font-medium">
+            <a
+              href="#"
+              className="text-gray-600 hover:text-emerald-600 font-medium"
+            >
               Promo
             </a>
-            <a href="#" className="text-gray-600 hover:text-emerald-600 font-medium">
+            <a
+              href="#"
+              className="text-gray-600 hover:text-emerald-600 font-medium"
+            >
               Kontak
             </a>
           </nav>
@@ -195,9 +210,10 @@ export default function ApotekHome() {
 
               {/* Buttons */}
               <div className="flex gap-4 mb-12">
-                <button 
+                <button
                   onClick={() => navigate("/category/obat-obatan")}
-                  className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition">
+                  className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition"
+                >
                   Belanja Sekarang
                 </button>
                 <button className="border-2 border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition">
@@ -225,7 +241,7 @@ export default function ApotekHome() {
             {/* Right Image */}
             <div className="flex-1">
               <img
-                src="https://images.unsplash.com/photo-1631549916768-4c4ed2fe18e6?w=600&h=500&fit=crop"
+                src="/img/apotek.jpg"
                 alt="Apotek Sehat"
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />
@@ -253,7 +269,9 @@ export default function ApotekHome() {
                   <div
                     className={`w-24 h-24 rounded-full ${category.color} flex items-center justify-center shadow-md hover:shadow-lg transition-shadow`}
                   >
-                    <IconComponent className={`w-10 h-10 ${category.iconColor}`} />
+                    <IconComponent
+                      className={`w-10 h-10 ${category.iconColor}`}
+                    />
                   </div>
                   <p className="text-center text-gray-700 font-semibold text-sm">
                     {category.name}
@@ -321,9 +339,7 @@ export default function ApotekHome() {
               <p className="text-gray-400 text-sm">
                 Email: info@apoteksehat.com
               </p>
-              <p className="text-gray-400 text-sm">
-                Telp: 0812-3456-7890
-              </p>
+              <p className="text-gray-400 text-sm">Telp: 0812-3456-7890</p>
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">

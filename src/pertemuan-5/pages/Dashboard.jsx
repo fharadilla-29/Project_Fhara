@@ -1,63 +1,127 @@
-import { FaShoppingCart, FaTruck, FaBan, FaDollarSign } from "react-icons/fa";
-import PageHeader from "../components/PageHeader";
-import QuickStats from "../components/QuickStats";
-import RecentOrders from "../components/RecentOrders";
+const summaryCards = [
+  {
+    title: "Teachers",
+    total: "15",
+    img: "/img/Destinasi-1.jpg",
+    bg: "from-lime-500 to-lime-400",
+  },
+  {
+    title: "Students",
+    total: "1600",
+    img: "/img/Destinasi-2.jpg",
+    bg: "from-violet-500 to-violet-400",
+  },
+  {
+    title: "Classes",
+    total: "10",
+    img: "/img/Destinasi-3.jpg",
+    bg: "from-amber-400 to-orange-300",
+  },
+  {
+    title: "Subjects",
+    total: "10",
+    img: "/img/Destinasi-4.jpg",
+    bg: "from-rose-400 to-pink-300",
+  },
+  {
+    title: "Attendance",
+    total: "80%",
+    img: "/img/Destinasi-5.jpg",
+    bg: "from-red-400 to-red-300",
+  },
+  {
+    title: "Admins",
+    total: "15",
+    img: "/img/Destinasi-6.jpg",
+    bg: "from-yellow-400 to-amber-300",
+  },
+  {
+    title: "Department",
+    total: "10",
+    img: "/img/bukber.webp",
+    bg: "from-blue-500 to-indigo-400",
+  },
+  {
+    title: "Grading",
+    total: "15",
+    img: "/img/fhara.jpeg",
+    bg: "from-cyan-500 to-teal-400",
+  },
+];
 
 export default function Dashboard() {
-    return (
-        <div id="dashboard-container">
-            <PageHeader/>
-            <div id="dashboard-grid" className="p-5 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <div id="dashboard-orders" className="flex items-center space-x-5 bg-white rounded-lg shadow-md p-4">
-                    <div id="orders-icon" className="bg-hijau rounded-full p-4">
-                        <FaShoppingCart />
-                    </div>
-                    <div id="orders-info" className="flex flex-col">
-                        <span id="orders-count" className="text-2xl font-bold">75</span>
-                        <span id="orders-text" className="text-gray-400">Total Orders</span>
-                    </div>
-                </div>
-
-                <div id="dashboard-delivered" className="flex items-center space-x-5 bg-white rounded-lg shadow-md p-4">
-                    <div id="delivered-icon" className="bg-biru rounded-full p-4">
-                        <FaTruck />
-                    </div>
-                    <div id="delivered-info" className="flex flex-col">
-                        <span id="delivered-count" className="text-2xl font-bold">175</span>
-                        <span id="delivered-text" className="text-gray-400">Total Delivered</span>
-                    </div>
-                </div>
-
-                <div id="dashboard-canceled" className="flex items-center space-x-5 bg-white rounded-lg shadow-md p-4">
-                    <div id="canceled-icon" className="bg-merah rounded-full p-4">
-                        <FaBan />
-                    </div>
-                    <div id="canceled-info" className="flex flex-col">
-                        <span id="canceled-count" className="text-2xl font-bold">40</span>
-                        <span id="canceled-text" className="text-gray-400">Total Canceled</span>
-                    </div>
-                </div>
-
-                <div id="dashboard-revenue" className="flex items-center space-x-5 bg-white rounded-lg shadow-md p-4">
-                    <div id="revenue-icon" className="bg-kuning rounded-full p-4">
-                        <FaDollarSign />
-                    </div>
-                    <div id="revenue-info" className="flex flex-col">
-                        <span id="revenue-amount" className="text-2xl font-bold">Rp.128</span>
-                        <span id="revenue-text" className="text-gray-400">Total Revenue</span>
-                    </div>
-                </div>
-            </div>
-            
-            {/* Improvisasi 1: Quick Stats */}
-            <div id="dashboard-stats" className="p-5">
-                <QuickStats />
-            </div>
-
-            {/* Improvisasi 2: Recent Orders */}
-            <div id="dashboard-orders-section" className="p-5">
-                <RecentOrders />
-            </div>
+  return (
+    <div id="dashboard-container" className="min-h-screen bg-gray-100">
+      <div className="border-b border-gray-200 bg-white px-5 py-4">
+        <div className="flex items-center justify-between">
+          <p className="text-lg text-gray-600">
+            You're Logged as Administrator.
+          </p>
+          <div className="flex items-center gap-3">
+            <img
+              src="/img/fhara.jpeg"
+              alt="Admin"
+              className="h-9 w-9 rounded-full border border-gray-200 object-cover"
+            />
+            <span className="font-medium text-gray-700">John Deo</span>
+          </div>
         </div>
-    );
+      </div>
+
+      <div className="p-5">
+        <h2 className="mb-4 text-3xl font-semibold text-gray-800">
+          Admin dashboard
+        </h2>
+
+        <div
+          id="dashboard-grid"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          {summaryCards.map((card) => (
+            <div
+              key={card.title}
+              className={`rounded-lg bg-linear-to-r ${card.bg} p-4 text-white shadow-md`}
+            >
+              <div className="flex items-start justify-between gap-4">
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="h-14 w-14 rounded-md border border-white/40 object-cover"
+                />
+                <div className="text-right">
+                  <p className="text-sm opacity-90">Total</p>
+                  <p className="text-4xl font-bold leading-none">
+                    {card.total}
+                  </p>
+                </div>
+              </div>
+              <p className="mt-4 text-lg font-medium">{card.title}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="mb-4 mt-8 text-3xl font-medium text-gray-700">
+          Analytic the overall performance
+        </h3>
+
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <img
+              src="/img/bukber.webp"
+              alt="Bar chart overview"
+              className="h-56 w-full rounded-lg object-cover"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <img
+              src="/img/Destinasi-6.jpg"
+              alt="Line chart overview"
+              className="h-56 w-full rounded-lg object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
